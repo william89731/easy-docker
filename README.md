@@ -1,1 +1,12 @@
-# easy-docker
+![docker2](https://user-images.githubusercontent.com/68069659/184501656-9079ee44-37bf-4ad2-af34-03f192fe94b1.gif)
+
+[![os](https://img.shields.io/badge/os-linux-red)](https://www.linux.org/)
+[![script](https://img.shields.io/badge/script-bash-orange)](https://www.gnu.org/software/bash/)
+[![docker version](https://img.shields.io/badge/docker%20version-20.10-brightgreen)](https://www.docker.com/)
+[![license](https://img.shields.io/badge/license-Apache--2.0-yellowgreen)](https://apache.org/licenses/LICENSE-2.0)
+[![donate](https://img.shields.io/badge/donate-wango-blue)](https://www.wango.org/donate.aspx)
+
+
+# Easy docker and docker compose
+
+i wrote this script to facilitate docker and docker compose v2 installation
