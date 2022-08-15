@@ -9,4 +9,6 @@
 
 # Easy docker and docker compose
 
-i wrote this script to facilitate docker and docker compose v2 installation
+I wrote this script to facilitate [docker](https://www.docker.com/) and [docker compose v2](https://docs.docker.com/compose/cli-command/) installation.
+
+You can also use the script to update docker compose.
