@@ -18,7 +18,7 @@ echo "
 	 "
 sleep $TIMEOUT
 echo ""
-info "press ctr+c to abort this script"	 
+warn "press ctr+c to abort this script"	 
 count=0
 total=34
 pstr="[=======================================================================] "
@@ -29,8 +29,9 @@ while [ $count -lt $total ]; do
   printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
   
 done	 
-echo ""
 
+echo ""
+echo ""
 command -v docker > /dev/null 2>&1 || MISSING_PACKAGES+=("docker")
 if [[ ! -z "$MISSING_PACKAGES" ]]; then
   info "I install docker..."
@@ -43,17 +44,19 @@ if [[ ! -z "$MISSING_PACKAGES" ]]; then
   newgrp docker
 fi
 echo ""
-info "remove old version docker compose"
 echo ""
+info "remove old version docker compose"
 sudo apt-get remove docker-compose
 sudo rm -rf ~/.docker/cli-plugins
 
-info "install docker compose"
 echo ""
+echo ""
+info "install docker compose"
 mkdir -p ~/.docker/cli-plugins
 sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION
 sudo chmod +x $DESTINATION
 
+echo ""
 echo ""
 docker -v
 docker compose version
