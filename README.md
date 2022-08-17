@@ -19,7 +19,7 @@ clone this repo, or download this [script](https://github.com/william89731/easy-
 
 in the same directory where you have the script, open your terminal and launch:
 ```bash
-sudo cmod +x install_updater.sh
+sudo chmod +x install_updater.sh
 ```
 run script:
 
