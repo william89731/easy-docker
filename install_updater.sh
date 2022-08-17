@@ -4,6 +4,7 @@ VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/lat
 DESTINATION=~/.docker/cli-plugins/docker-compose
 
 declare -a MISSING_PACKAGES
+declare -a MISSING_DOCKER
 function info { echo -e "\e[32m[info] $*\e[39m"; }
 function warn  { echo -e "\e[33m[warn] $*\e[39m"; }
 function error { echo -e "\e[31m[error] $*\e[39m"; exit 1; }
@@ -26,14 +27,22 @@ while [ $count -lt $total ]; do
   sleep 0.5 # this is work
   count=$(( $count + 1 ))
   pd=$(( $count * 73 / $total ))
-  printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
-  
+  printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr  
 done	 
 
 echo ""
 echo ""
-command -v docker > /dev/null 2>&1 || MISSING_PACKAGES+=("docker")
+info "check necessary packages"
+command -v curl > /dev/null 2>&1 || MISSING_PACKAGES+=("curl")
+command -v grep > /dev/null 2>&1 || MISSING_PACKAGES+=("grep")
 if [[ ! -z "$MISSING_PACKAGES" ]]; then
+  info "I install the necessary packages ..."
+  apt-get update
+  apt-get install -y $MISSING_PACKAGES
+fi
+
+command -v docker > /dev/null 2>&1 || MISSING_DOCKER+=("docker")
+if [[ ! -z "$MISSING_DOCKER" ]]; then
   info "I install docker..."
   cd ~
   sudo rm  get-docker.sh
@@ -43,12 +52,12 @@ if [[ ! -z "$MISSING_PACKAGES" ]]; then
   sudo usermod -aG docker $USER
   newgrp docker
 fi
+
 echo ""
 echo ""
 info "remove old version docker compose"
 sudo apt-get remove docker-compose
 sudo rm -rf ~/.docker/cli-plugins
-
 echo ""
 echo ""
 info "install docker compose"
