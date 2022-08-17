@@ -12,3 +12,17 @@
 I wrote this script to facilitate [docker](https://www.docker.com/) and [docker compose v2](https://docs.docker.com/compose/cli-command/) installation.
 
 You can also use the script to update docker compose.
+
+# usage
+
+clone this repo, or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
+
+in the same directory where you have the script, open your terminal and launch:
+```bash
+sudo cmod +x install_updater.sh
+```
+run script:
+
+```bash
+bash install_updater.sh
+```
