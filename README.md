@@ -13,6 +13,10 @@ I wrote this script to facilitate [docker](https://www.docker.com/) and [docker 
 
 You can also use the script to update docker compose.
 
+### warning:
+
+```this script has been tested in distro debian based```
+
 # usage
 
 clone this repo, or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
