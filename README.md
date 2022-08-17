@@ -26,3 +26,4 @@ run script:
 ```bash
 bash install_updater.sh
 ```
+![updateDockerCompose](https://user-images.githubusercontent.com/68069659/185078696-52d06033-c3a6-4c0c-b98a-0c89c10d7055.gif)
