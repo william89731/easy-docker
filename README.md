@@ -22,10 +22,6 @@ You can also use the script to update docker compose.
 clone this repo, or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
 
 in the same directory where you have the script, open your terminal and launch:
-```bash
-sudo chmod +x install_updater.sh
-```
-run script:
 
 ```bash
 bash install_updater.sh
