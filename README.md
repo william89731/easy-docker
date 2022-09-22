@@ -13,11 +13,11 @@ I wrote this script to facilitate [docker](https://www.docker.com/) and [docker 
 
 You can also use the script to update docker compose.
 
-### warning:
+### Warning:
 
 ```this script has been tested in distro debian based```
 
-# usage
+# Usage
 
 clone this repo, or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
 
@@ -27,3 +27,28 @@ in the same directory where you have the script, open your terminal and launch:
 bash install_updater.sh
 ```
 ![updateDockerCompose](https://user-images.githubusercontent.com/68069659/185078696-52d06033-c3a6-4c0c-b98a-0c89c10d7055.gif)
+
+# Bonus
+
+```run script in remote host```
+
+make your [host.txt](https://github.com/william89731/easy-docker/blob/main/host.txt)
+
+set alias:
+
+```bash
+sudo nano ~/.bashrc
+```
+(add this line:) ``` alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/remote_host.sh ; done' ```  (save and exit)
+
+```bash
+source ~/.bashrc
+```
+
+launch script:
+
+```bash
+remote
+```
+
+
