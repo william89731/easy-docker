@@ -19,7 +19,13 @@ You can also use the script to update docker compose.
 
 # Usage
 
-clone this repo, or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
+clone this repo:
+
+```bash
+cd ~ && git clone https://github.com/william89731/easy-docker
+```
+
+or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
 
 in the same directory where you have the script, open your terminal and launch:
 
