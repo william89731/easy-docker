@@ -19,7 +19,7 @@ You can also use the script to update docker compose.
 
 # Usage
 
-clone this repo:
+- clone this repo:
 
 ```bash
 cd ~ && git clone https://github.com/william89731/easy-docker
@@ -38,20 +38,19 @@ bash install_updater.sh
 
 ```run script in remote host```
 
-make your [host.txt](https://github.com/william89731/easy-docker/blob/main/host.txt)
+- make your [host.txt](https://github.com/william89731/easy-docker/blob/main/host.txt)
 
-set alias:
+- set alias:
 
-```bash
-sudo nano ~/.bashrc
-```
-(add this line:) ``` alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/remote_host.sh ; done' ```  (save and exit)
 
-```bash
-source ~/.bashrc
-```
+```bash 
+alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/remote_host.sh ; done' 
+```  
 
-launch script:
+
+
+
+- launch script:
 
 ```bash
 remote
