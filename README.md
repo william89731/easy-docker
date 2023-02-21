@@ -44,10 +44,8 @@ bash install_updater.sh
 
 
 ```bash 
-alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/remote_host.sh ; done' 
+alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/install_updater.sh ; done' 
 ```  
-
-
 
 
 - launch script:
