@@ -19,10 +19,10 @@ You can also use the script to update docker compose.
 
 # Usage
 
-- clone this repo:
+- launch:
 
 ```bash
-cd ~ && git clone https://github.com/william89731/easy-docker
+curl -sSfL https://raw.githubusercontent.com/william89731/easy-docker/main/install_updater.sh | bash
 ```
 
 or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
