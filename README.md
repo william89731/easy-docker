@@ -25,33 +25,7 @@ You can also use the script to update docker compose.
 curl -sSfL https://raw.githubusercontent.com/william89731/easy-docker/main/install_updater.sh | bash
 ```
 
-or download this [script](https://github.com/william89731/easy-docker/blob/main/install_updater.sh).
+![image](https://github.com/william89731/easy-docker/assets/68069659/f9c79ebc-c094-468b-83b5-f1bffa241f11)
 
-in the same directory where you have the script, open your terminal and launch:
-
-```bash
-bash install_updater.sh
-```
-![updateDockerCompose](https://user-images.githubusercontent.com/68069659/185078696-52d06033-c3a6-4c0c-b98a-0c89c10d7055.gif)
-
-# Bonus
-
-```run script in remote host```
-
-- make your [host.txt](https://github.com/william89731/easy-docker/blob/main/host.txt)
-
-- set alias:
-
-
-```bash 
-alias remote='for server in $(cat ~/easy-docker/host.txt) ; do ssh ${server} 'bash' < ~/easy-docker/install_updater.sh ; done' 
-```  
-
-
-- launch script:
-
-```bash
-remote
-```
 
 
