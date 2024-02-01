@@ -41,6 +41,5 @@ echo "
 for clean system launch:
 docker system prune -a --force"
 echo ""
-
 command docker -v
 command docker compose version
