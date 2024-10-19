@@ -9,6 +9,8 @@
 
 # Easy docker and docker compose
 
+DEPRECATED in flavour to [docker tool](https://github.com/william89731/docker-tool)
+
 I wrote this script to facilitate [docker](https://www.docker.com/) and [docker compose v2](https://docs.docker.com/compose/cli-command/) installation.
 
 You can also use the script to update docker compose.
